@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_margin="5dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="7dp">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/collapsedSet">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="220dp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/setListImg"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setListTxtHighscore"
+                android:layout_below="@+id/setListName"
+                android:text="Highscore: "
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/setListHighscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setListName"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toStartOf="@id/setListArrowDown"
+                android:layout_toEndOf="@+id/setListTxtHighscore"
+                android:text="0" />
+
+
+            <TextView
+                android:id="@+id/setListName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setListImg"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Set Name" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setListArrowDown"
+                android:layout_below="@+id/setListImg"
+                android:src="@drawable/ic_down_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandedSet"
+            android:layout_below="@id/collapsedSet"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/setListLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Languages:" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setListLanguageSpinner"
+                android:dropDownWidth="match_parent"
+                android:layout_toEndOf="@+id/setListLanguage"
+                android:entries="@array/Languages" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setListTxtNumberOfWords"
+                android:text="Words to learn:"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/setListLanguage"/>
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setListDifficultyGroup"
+                android:orientation="horizontal"
+                android:layout_below="@+id/setListTxtNumberOfWords"
+                android:layout_marginStart="5dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Easy"
+                    android:id="@+id/setListRadioBtnEasy"
+                    android:textSize="11sp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setListRadioBtnMedium"
+                    android:text="Medium"
+                    android:textSize="11sp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setListRadioBtnHard"
+                    android:text="Hard"
+                    android:textSize="11sp"/>
+
+
+            </RadioGroup>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setListArrowUp"
+                android:src="@drawable/ic_up_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/setListDifficultyGroup"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setListStart"
+                android:layout_below="@+id/setListDifficultyGroup"
+                android:text="Start"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/setListNumberOfWords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/setListDifficultyGroup"
+                android:layout_marginBottom="-8dp"
+                android:layout_toEndOf="@id/setListTxtNumberOfWords"
+                android:hint="Number of words"
+                android:inputType="number"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

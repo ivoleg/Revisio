@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/search"
+        android:title="Search for a set"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="android.widget.SearchView"/>
+    <item
+        android:id="@+id/deleteSet"
+        android:title="Delete Word Set"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/addSet"
+        android:icon="@drawable/ic_add"
+        android:title="Add Word Set"
+        app:showAsAction="always" />
+
+</menu>

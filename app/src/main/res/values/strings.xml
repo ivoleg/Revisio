@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Revisio</string>
+    <string name="myGitUrl">https://github.com/ivoleg</string>
+    <string name="No">No, thanks.</string>
+    <string name="Yes">Yes, sure!</string>
+    <string name="holder">Placeholder</string>
+    <array name="Languages">
+        <item>French</item>
+        <item>Spanish</item>
+    </array>
+</resources>
